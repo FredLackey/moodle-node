@@ -1,7 +1,7 @@
 const client = require('../src');
 
 const main = async () => {
-  const user = await client.cohort.createCohort({
+  const cohort = await client.cohort.createCohort({
 
     // Category Type
     type: 'id',
@@ -15,7 +15,7 @@ const main = async () => {
     visible: true,
 
   });
-  console.log(user);
+  console.log(cohort);
 };
 
 main();

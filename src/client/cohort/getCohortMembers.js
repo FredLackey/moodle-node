@@ -10,8 +10,8 @@ const getCohortMembers = async (id) => {
 
   const data = await _.doPost(url);
 
-  if (_.isValidArray(data, true)) {
-    return _.first(data.filter(x => x?.cohortid));
+  if (_.isValidArray(data?.userids, true)) {
+    return data.userids;
   }
 
   return data;

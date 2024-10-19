@@ -6,7 +6,7 @@ const main = async () => {
     password: 'Pass1234!',
     email: 'joeblow@nowhere.com',
     firstname: 'Joe',
-    lastname: 'Blow',
+    lastname: 'Blow'
   });
   console.log(user);
 };
