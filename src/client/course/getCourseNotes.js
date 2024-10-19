@@ -6,7 +6,7 @@ const BASE_URL = process.env.MOODLE_URL;
 
 const getCourseNotes = async (courseid) => {
 
-  let url = `${BASE_URL}/webservice/rest/server.php?wsfunction=${FUNCTION}&wstoken=${TOKEN}&moodlewsrestformat=json`;
+  let url = `${BASE_URL}wsfunction=${FUNCTION}&wstoken=${TOKEN}&moodlewsrestformat=json`;
 
   url += `&courseid=${courseid}`;
 

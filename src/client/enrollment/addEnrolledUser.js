@@ -19,7 +19,7 @@ const getRoleName = (id) => Object.keys(ROLES).find(key => ROLES[key] === id);
 
 const addEnrolledUser = async ({ courseid, userid, roleid, timestart, timeend, suspend }) => {
   
-  let url = `${BASE_URL}/webservice/rest/server.php?wsfunction=${FUNCTION}&wstoken=${TOKEN}&moodlewsrestformat=json`;
+  let url = `${BASE_URL}wsfunction=${FUNCTION}&wstoken=${TOKEN}&moodlewsrestformat=json`;
 
   url += `&enrolments[0][roleid]=${roleid}`;
   url += `&enrolments[0][userid]=${userid}`;

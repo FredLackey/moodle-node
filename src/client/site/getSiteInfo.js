@@ -5,7 +5,7 @@ const TOKEN = process.env.MOODLE_TOKEN;
 const BASE_URL = process.env.MOODLE_URL;
 
 const getSiteInfo = async () => {
-  const url = `${BASE_URL}/webservice/rest/server.php?wsfunction=${FUNCTION}&wstoken=${TOKEN}&moodlewsrestformat=json`;
+  const url = `${BASE_URL}wsfunction=${FUNCTION}&wstoken=${TOKEN}&moodlewsrestformat=json`;
   const response = await _.doPost(url);
   return response;
 };

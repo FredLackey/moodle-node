@@ -8,7 +8,7 @@ const createUser = async (params) => {
 
   const {username, password, email, firstname, lastname} = params;
 
-  let url = `${BASE_URL}/webservice/rest/server.php?wsfunction=${FUNCTION}&wstoken=${TOKEN}&moodlewsrestformat=json`;
+  let url = `${BASE_URL}wsfunction=${FUNCTION}&wstoken=${TOKEN}&moodlewsrestformat=json`;
 
   url += username ? `&users[0][username]=${username}` : '';
   url += email ? `&users[0][email]=${email}` : '';
@@ -16,7 +16,12 @@ const createUser = async (params) => {
   url += firstname ? `&users[0][firstname]=${firstname}` : '';
   url += lastname ? `&users[0][lastname]=${lastname}` : '';
 
-  const response = await _.doPost(encodeURI(url));
+  const response = await _.doPost(url);
+
+  if (_.isValidArray(response, false) && _.isValidString(response[0].username)) {
+    return response[0];
+  };
+
   return response;
 };
 

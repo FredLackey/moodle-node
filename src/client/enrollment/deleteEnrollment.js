@@ -6,7 +6,7 @@ const BASE_URL = process.env.MOODLE_URL;
 
 const deleteEnrollment = async ({courseid, userid}) => {
 
-  let url = `${BASE_URL}/webservice/rest/server.php?wsfunction=${FUNCTION}&wstoken=${TOKEN}&moodlewsrestformat=json`;
+  let url = `${BASE_URL}wsfunction=${FUNCTION}&wstoken=${TOKEN}&moodlewsrestformat=json`;
 
   url += `&enrolments[0][courseid]=${courseid}`;
   url += `&enrolments[0][userid]=${userid}`;

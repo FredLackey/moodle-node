@@ -14,7 +14,7 @@ const addCourseNote = async ({ courseid, userid, text, format = 'HTML' }) => {
     MARKDOWN: 4,
   };
   
-  let url = `${BASE_URL}/webservice/rest/server.php?wsfunction=${FUNCTION}&wstoken=${TOKEN}&moodlewsrestformat=json`;
+  let url = `${BASE_URL}wsfunction=${FUNCTION}&wstoken=${TOKEN}&moodlewsrestformat=json`;
 
   url += `&notes[0][userid]=${userid}`;
   url += `&notes[0][courseid]=${courseid}`;

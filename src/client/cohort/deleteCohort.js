@@ -6,7 +6,7 @@ const BASE_URL = process.env.MOODLE_URL;
 
 const deleteCohort = async (id) => {
 
-  const url = `${BASE_URL}/webservice/rest/server.php?wsfunction=${FUNCTION}&wstoken=${TOKEN}&moodlewsrestformat=json&cohortids[0]=${id}`;
+  const url = `${BASE_URL}wsfunction=${FUNCTION}&wstoken=${TOKEN}&moodlewsrestformat=json&cohortids[0]=${id}`;
   console.log(url);
   console.log('')
 

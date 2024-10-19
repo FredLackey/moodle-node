@@ -18,7 +18,7 @@ const updateCohort = async (params) => {
   const descriptionFormat = getDescriptionFormat(params.descriptionFormat);
   const visible = ['true', '1'].includes(`${params.visible}.trim().toLowerCase()`) ? '1' : '0';
 
-  let url = `${BASE_URL}/webservice/rest/server.php?wsfunction=${FUNCTION}&wstoken=${TOKEN}&moodlewsrestformat=json`;
+  let url = `${BASE_URL}wsfunction=${FUNCTION}&wstoken=${TOKEN}&moodlewsrestformat=json`;
   url += _.isDefined(id) ? `&cohorts[0][id]=${id}` : '';
   url += name ? `&cohorts[0][name]=${name}` : '';
   url += idnumber ? `&cohorts[0][idnumber]=${idnumber}` : '';
