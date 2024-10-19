@@ -27,11 +27,15 @@ const createCohort = async (params) => {
   url += type ? `&cohorts[0][categorytype][type]=${type}` : '';
   url += value ? `&cohorts[0][categorytype][value]=${value}` : '';
   
-  console.log(url);
-  console.log('')
+  const data = await _.doPost(url);
+  if (_.isValidArray(data, true)) {
+    return _.single(data);
+  }
+  if (_.isValidObject(data)) {
+    return data;
+  }
 
-  const response = await _.doPost(url);
-  return response;
+  return null;
 };
 
 module.exports = createCohort;

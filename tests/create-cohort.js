@@ -8,9 +8,9 @@ const main = async () => {
     value: '1',
 
     // Cohort
-    idnumber: 'fdsa',
-    name: 'New Cohort',
-    description: 'This is a new cohort',
+    idnumber: 'abc123',
+    name: 'Cohort abc123',
+    description: 'Cohort abc123 description',
     descriptionFormat: 'HTML',
     visible: true,
 

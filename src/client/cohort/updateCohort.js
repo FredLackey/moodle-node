@@ -27,9 +27,6 @@ const updateCohort = async (params) => {
   url += visible ? `&cohorts[0][visible]=${visible}` : '';
   url += type ? `&cohorts[0][categorytype][type]=${type}` : '';
   url += value ? `&cohorts[0][categorytype][value]=${value}` : '';
-  
-  console.log(url);
-  console.log('')
 
   const response = await _.doPost(url);
   return response;
