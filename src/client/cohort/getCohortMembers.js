@@ -9,6 +9,13 @@ const getCohortMembers = async (id) => {
   const url = `${BASE_URL}wsfunction=${FUNCTION}&wstoken=${TOKEN}&moodlewsrestformat=json&cohortids[0]=${id}`;
 
   const data = await _.doPost(url);
+  if (data?.message) {
+    console.error(`Error fetching cohort members: ${id}`, data.message);
+    return [];
+  }
+  if (!_.isValidObject(data)) {
+    return null;
+  }
 
   if (_.isValidArray(data?.userids, true)) {
     return data.userids;
