@@ -1,14 +1,29 @@
 const _ = require('cleaner-node');
 
-const FUNCTION = 'core_user_get_users';
-const TOKEN = process.env.MOODLE_TOKEN;
-const BASE_URL = process.env.MOODLE_URL;
+const getUser = require('./getUser');
 
-const getCourses = async () => {
-  let url = `${BASE_URL}wsfunction=${FUNCTION}&wstoken=${TOKEN}&moodlewsrestformat=json`;
-  url += '&criteria[0][key]=&criteria[0][value]='
-  const response = await _.doPost(url);
-  return response;
+const getUsers = async (ids) => {
+
+  let validIds = [].concat(ids).filter(x => (_.isNumber(x) || _.isDigits(x) || _.isValidString(x)));
+  if (!_.isValidArray(validIds)) {
+    throw new Error('Invalid ids');
+  }
+  validIds = _.unique(validIds);
+  
+
+  const users = [];
+  for (let i = 0; i < validIds.length; i++) {
+    const id = validIds[i];
+    const user = await getUser(id);
+    if (!user?.username) {
+      continue;
+    }
+    if (!users.some(x => x.username === user.username)) {
+      users.push(user);
+    }
+  }
+
+  return users;
 };
 
-module.exports = getCourses;
+module.exports = getUsers;
