@@ -15,7 +15,7 @@ const deleteCohortMember = async ({cohort, user}) => {
   console.log('')
 
   const response = await _.doPost(url);
-  return response;
+  return response === null ? { id: user } : response;
 };
 
 module.exports = deleteCohortMember;

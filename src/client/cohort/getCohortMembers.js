@@ -13,10 +13,7 @@ const getCohortMembers = async (id) => {
     console.error(`Error fetching cohort members: ${id}`, data.message);
     return [];
   }
-  if (!_.isValidObject(data)) {
-    return null;
-  }
-
+  const cohort = _.single(data);
   if (_.isValidArray(data?.userids, true)) {
     return data.userids;
   }

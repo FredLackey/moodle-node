@@ -1,6 +1,6 @@
 const client = require('../src');
 
-const TEST_COHORT_ID = 9;
+const TEST_COHORT_ID = 6;
 const TEST_COHORT_IDNUMBER = 'fdsa';
 
 const TEST_USER_ID = 13;
