@@ -9,7 +9,6 @@ const getCourse = async (id) => {
   let url = `${BASE_URL}wsfunction=${FUNCTION}&wstoken=${TOKEN}&moodlewsrestformat=json`;
 
   url += `&options[ids][0]=${id}`;
-  console.log(url);
 
   const response = await _.doPost(url);
 

@@ -1,0 +1,1295 @@
+{
+	"info": {
+		"_postman_id": "92173881-3ede-4c4f-9a0c-1dbdc3d396b1",
+		"name": "Moodle Web Services",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "105665"
+	},
+	"item": [
+		{
+			"name": "Site",
+			"item": [
+				{
+					"name": "Get Site Info",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"criteria\": [\n        {\n            \"key\": \"\",\n            \"value\": \"\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/moodle/webservice/rest/server.php?wstoken={{TOKEN}}&wsfunction=core_webservice_get_site_info&moodlewsrestformat=json",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"moodle",
+								"webservice",
+								"rest",
+								"server.php"
+							],
+							"query": [
+								{
+									"key": "wstoken",
+									"value": "{{TOKEN}}"
+								},
+								{
+									"key": "wsfunction",
+									"value": "core_webservice_get_site_info"
+								},
+								{
+									"key": "moodlewsrestformat",
+									"value": "json"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Courses",
+			"item": [
+				{
+					"name": "Get All Categories",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"criteria\": [\n        {\n            \"key\": \"\",\n            \"value\": \"\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/moodle/webservice/rest/server.php?wstoken={{TOKEN}}&wsfunction=core_course_get_categories&moodlewsrestformat=json",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"moodle",
+								"webservice",
+								"rest",
+								"server.php"
+							],
+							"query": [
+								{
+									"key": "wstoken",
+									"value": "{{TOKEN}}"
+								},
+								{
+									"key": "wsfunction",
+									"value": "core_course_get_categories"
+								},
+								{
+									"key": "moodlewsrestformat",
+									"value": "json"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Courses",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/moodle/webservice/rest/server.php?wstoken={{TOKEN}}&wsfunction=core_course_get_courses&moodlewsrestformat=json",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"moodle",
+								"webservice",
+								"rest",
+								"server.php"
+							],
+							"query": [
+								{
+									"key": "wstoken",
+									"value": "{{TOKEN}}"
+								},
+								{
+									"key": "wsfunction",
+									"value": "core_course_get_courses"
+								},
+								{
+									"key": "moodlewsrestformat",
+									"value": "json"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Get All Users",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"criteria\": [\n        {\n            \"key\": \"\",\n            \"value\": \"\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/moodle/webservice/rest/server.php?wstoken={{TOKEN}}&wsfunction=core_user_get_users&moodlewsrestformat=json&criteria[0][key]=&criteria[0][value]=",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"moodle",
+								"webservice",
+								"rest",
+								"server.php"
+							],
+							"query": [
+								{
+									"key": "wstoken",
+									"value": "{{TOKEN}}"
+								},
+								{
+									"key": "wsfunction",
+									"value": "core_user_get_users"
+								},
+								{
+									"key": "moodlewsrestformat",
+									"value": "json"
+								},
+								{
+									"key": "criteria[0][key]",
+									"value": ""
+								},
+								{
+									"key": "criteria[0][value]",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"criteria\": [\n        {\n            \"key\": \"\",\n            \"value\": \"\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/moodle/webservice/rest/server.php?wstoken={{TOKEN}}&wsfunction=core_user_get_users&moodlewsrestformat=json&criteria[0][key]=id&criteria[0][value]=9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"moodle",
+								"webservice",
+								"rest",
+								"server.php"
+							],
+							"query": [
+								{
+									"key": "wstoken",
+									"value": "{{TOKEN}}"
+								},
+								{
+									"key": "wsfunction",
+									"value": "core_user_get_users"
+								},
+								{
+									"key": "moodlewsrestformat",
+									"value": "json"
+								},
+								{
+									"key": "criteria[0][key]",
+									"value": "id"
+								},
+								{
+									"key": "criteria[0][value]",
+									"value": "9"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User Courses",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/moodle/webservice/rest/server.php?wstoken={{TOKEN}}&wsfunction=core_enrol_get_users_courses&moodlewsrestformat=json&userid=8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"moodle",
+								"webservice",
+								"rest",
+								"server.php"
+							],
+							"query": [
+								{
+									"key": "wstoken",
+									"value": "{{TOKEN}}"
+								},
+								{
+									"key": "wsfunction",
+									"value": "core_enrol_get_users_courses"
+								},
+								{
+									"key": "moodlewsrestformat",
+									"value": "json"
+								},
+								{
+									"key": "userid",
+									"value": "8"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"criteria\": [\n        {\n            \"key\": \"\",\n            \"value\": \"\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/moodle/webservice/rest/server.php?wstoken={{TOKEN}}&wsfunction=core_user_create_users&moodlewsrestformat=json&users[0][username]=test@nowhere.com&users[0][password]=Pass1234!&users[0][firstname]=Test&users[0][lastname]=User&users[0][email]=test@nowhere.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"moodle",
+								"webservice",
+								"rest",
+								"server.php"
+							],
+							"query": [
+								{
+									"key": "wstoken",
+									"value": "{{TOKEN}}"
+								},
+								{
+									"key": "wsfunction",
+									"value": "core_user_create_users"
+								},
+								{
+									"key": "moodlewsrestformat",
+									"value": "json"
+								},
+								{
+									"key": "users[0][username]",
+									"value": "test@nowhere.com"
+								},
+								{
+									"key": "users[0][password]",
+									"value": "Pass1234!"
+								},
+								{
+									"key": "users[0][firstname]",
+									"value": "Test"
+								},
+								{
+									"key": "users[0][lastname]",
+									"value": "User"
+								},
+								{
+									"key": "users[0][email]",
+									"value": "test@nowhere.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"criteria\": [\n        {\n            \"key\": \"\",\n            \"value\": \"\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/moodle/webservice/rest/server.php?wstoken={{TOKEN}}&wsfunction=core_user_delete_users&moodlewsrestformat=json&userids[0]=4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"moodle",
+								"webservice",
+								"rest",
+								"server.php"
+							],
+							"query": [
+								{
+									"key": "wstoken",
+									"value": "{{TOKEN}}"
+								},
+								{
+									"key": "wsfunction",
+									"value": "core_user_delete_users"
+								},
+								{
+									"key": "moodlewsrestformat",
+									"value": "json"
+								},
+								{
+									"key": "userids[0]",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User Preferences",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"criteria\": [\n        {\n            \"key\": \"\",\n            \"value\": \"\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/moodle/webservice/rest/server.php?wstoken={{TOKEN}}&wsfunction=core_user_get_user_preferences&moodlewsrestformat=json&userid=5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"moodle",
+								"webservice",
+								"rest",
+								"server.php"
+							],
+							"query": [
+								{
+									"key": "wstoken",
+									"value": "{{TOKEN}}"
+								},
+								{
+									"key": "wsfunction",
+									"value": "core_user_get_user_preferences"
+								},
+								{
+									"key": "moodlewsrestformat",
+									"value": "json"
+								},
+								{
+									"key": "userid",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cohorts",
+			"item": [
+				{
+					"name": "Get All Cohorts",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"criteria\": [\n        {\n            \"key\": \"\",\n            \"value\": \"\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/moodle/webservice/rest/server.php?wstoken={{TOKEN}}&wsfunction=core_cohort_get_cohorts&moodlewsrestformat=json",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"moodle",
+								"webservice",
+								"rest",
+								"server.php"
+							],
+							"query": [
+								{
+									"key": "wstoken",
+									"value": "{{TOKEN}}"
+								},
+								{
+									"key": "wsfunction",
+									"value": "core_cohort_get_cohorts"
+								},
+								{
+									"key": "moodlewsrestformat",
+									"value": "json"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Cohort",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"criteria\": [\n        {\n            \"key\": \"\",\n            \"value\": \"\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/moodle/webservice/rest/server.php?wstoken={{TOKEN}}&wsfunction=core_cohort_create_cohorts&moodlewsrestformat=json&cohorts[0][name]=Test Cohort&cohorts[0][idnumber]=asdf&cohorts[0][categorytype][type]=id&cohorts[0][categorytype][value]=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"moodle",
+								"webservice",
+								"rest",
+								"server.php"
+							],
+							"query": [
+								{
+									"key": "wstoken",
+									"value": "{{TOKEN}}"
+								},
+								{
+									"key": "wsfunction",
+									"value": "core_cohort_create_cohorts"
+								},
+								{
+									"key": "moodlewsrestformat",
+									"value": "json"
+								},
+								{
+									"key": "cohorts[0][name]",
+									"value": "Test Cohort"
+								},
+								{
+									"key": "cohorts[0][idnumber]",
+									"value": "asdf"
+								},
+								{
+									"key": "cohorts[0][categorytype][type]",
+									"value": "id"
+								},
+								{
+									"key": "cohorts[0][categorytype][value]",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Cohort",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/moodle/webservice/rest/server.php?wstoken={{TOKEN}}&wsfunction=core_cohort_update_cohorts&moodlewsrestformat=json&cohorts[0][id]=1&cohorts[0][categorytype][type]=id&cohorts[0][categorytype][value]=1&cohorts[0][name]=Test Cohort&cohorts[0][idnumber]=asdf&cohorts[0][description]=Test Cohort Description",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"moodle",
+								"webservice",
+								"rest",
+								"server.php"
+							],
+							"query": [
+								{
+									"key": "wstoken",
+									"value": "{{TOKEN}}"
+								},
+								{
+									"key": "wsfunction",
+									"value": "core_cohort_update_cohorts"
+								},
+								{
+									"key": "moodlewsrestformat",
+									"value": "json"
+								},
+								{
+									"key": "cohorts[0][id]",
+									"value": "1"
+								},
+								{
+									"key": "cohorts[0][categorytype][type]",
+									"value": "id"
+								},
+								{
+									"key": "cohorts[0][categorytype][value]",
+									"value": "1"
+								},
+								{
+									"key": "cohorts[0][name]",
+									"value": "Test Cohort"
+								},
+								{
+									"key": "cohorts[0][idnumber]",
+									"value": "asdf"
+								},
+								{
+									"key": "cohorts[0][description]",
+									"value": "Test Cohort Description"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Cohort Members",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"criteria\": [\n        {\n            \"key\": \"\",\n            \"value\": \"\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/moodle/webservice/rest/server.php?wstoken={{TOKEN}}&wsfunction=core_cohort_get_cohort_members&moodlewsrestformat=json&cohortids[0]=6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"moodle",
+								"webservice",
+								"rest",
+								"server.php"
+							],
+							"query": [
+								{
+									"key": "wstoken",
+									"value": "{{TOKEN}}"
+								},
+								{
+									"key": "wsfunction",
+									"value": "core_cohort_get_cohort_members"
+								},
+								{
+									"key": "moodlewsrestformat",
+									"value": "json"
+								},
+								{
+									"key": "cohortids[0]",
+									"value": "6"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Cohort Members",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"criteria\": [\n        {\n            \"key\": \"\",\n            \"value\": \"\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/moodle/webservice/rest/server.php?wstoken={{TOKEN}}&wsfunction=core_cohort_add_cohort_members&moodlewsrestformat=json&members[0][cohorttype][type]=idnumber&members[0][cohorttype][value]=asdf&members[0][usertype][type]=username&members[0][usertype][value]=test@nowhere.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"moodle",
+								"webservice",
+								"rest",
+								"server.php"
+							],
+							"query": [
+								{
+									"key": "wstoken",
+									"value": "{{TOKEN}}"
+								},
+								{
+									"key": "wsfunction",
+									"value": "core_cohort_add_cohort_members"
+								},
+								{
+									"key": "moodlewsrestformat",
+									"value": "json"
+								},
+								{
+									"key": "members[0][cohorttype][type]",
+									"value": "idnumber"
+								},
+								{
+									"key": "members[0][cohorttype][value]",
+									"value": "asdf"
+								},
+								{
+									"key": "members[0][usertype][type]",
+									"value": "username"
+								},
+								{
+									"key": "members[0][usertype][value]",
+									"value": "test@nowhere.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Cohort Members",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"criteria\": [\n        {\n            \"key\": \"\",\n            \"value\": \"\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/moodle/webservice/rest/server.php?wstoken={{TOKEN}}&wsfunction=core_cohort_delete_cohort_members&moodlewsrestformat=json&members[0][cohortid]=1&members[0][userid]=5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"moodle",
+								"webservice",
+								"rest",
+								"server.php"
+							],
+							"query": [
+								{
+									"key": "wstoken",
+									"value": "{{TOKEN}}"
+								},
+								{
+									"key": "wsfunction",
+									"value": "core_cohort_delete_cohort_members"
+								},
+								{
+									"key": "moodlewsrestformat",
+									"value": "json"
+								},
+								{
+									"key": "members[0][cohortid]",
+									"value": "1"
+								},
+								{
+									"key": "members[0][userid]",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Enrollments",
+			"item": [
+				{
+					"name": "Get Enrolled Users",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"criteria\": [\n        {\n            \"key\": \"\",\n            \"value\": \"\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/moodle/webservice/rest/server.php?wstoken={{TOKEN}}&wsfunction=core_enrol_get_enrolled_users&moodlewsrestformat=json&courseid=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"moodle",
+								"webservice",
+								"rest",
+								"server.php"
+							],
+							"query": [
+								{
+									"key": "wstoken",
+									"value": "{{TOKEN}}"
+								},
+								{
+									"key": "wsfunction",
+									"value": "core_enrol_get_enrolled_users"
+								},
+								{
+									"key": "moodlewsrestformat",
+									"value": "json"
+								},
+								{
+									"key": "courseid",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Enrol Users",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"criteria\": [\n        {\n            \"key\": \"\",\n            \"value\": \"\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/moodle/webservice/rest/server.php?wstoken={{TOKEN}}&wsfunction=enrol_manual_enrol_users&moodlewsrestformat=json&enrolments[0][roleid]=5&enrolments[0][userid]=5&enrolments[0][courseid]=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"moodle",
+								"webservice",
+								"rest",
+								"server.php"
+							],
+							"query": [
+								{
+									"key": "wstoken",
+									"value": "{{TOKEN}}"
+								},
+								{
+									"key": "wsfunction",
+									"value": "enrol_manual_enrol_users"
+								},
+								{
+									"key": "moodlewsrestformat",
+									"value": "json"
+								},
+								{
+									"key": "enrolments[0][roleid]",
+									"value": "5",
+									"description": "5 = Student"
+								},
+								{
+									"key": "enrolments[0][userid]",
+									"value": "5"
+								},
+								{
+									"key": "enrolments[0][courseid]",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Unenrol Users",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"criteria\": [\n        {\n            \"key\": \"\",\n            \"value\": \"\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/moodle/webservice/rest/server.php?wstoken={{TOKEN}}&wsfunction=enrol_manual_unenrol_users&moodlewsrestformat=json&enrolments[0][userid]=5&enrolments[0][courseid]=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"moodle",
+								"webservice",
+								"rest",
+								"server.php"
+							],
+							"query": [
+								{
+									"key": "wstoken",
+									"value": "{{TOKEN}}"
+								},
+								{
+									"key": "wsfunction",
+									"value": "enrol_manual_unenrol_users"
+								},
+								{
+									"key": "moodlewsrestformat",
+									"value": "json"
+								},
+								{
+									"key": "enrolments[0][userid]",
+									"value": "5"
+								},
+								{
+									"key": "enrolments[0][courseid]",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "```\n+------+--------+------------------+---------------+-------------+------------------+\n| \"id\" | \"name\" |   \"shortname\"    | \"description\" | \"sortorder\" |   \"archetype\"    |\n+------+--------+------------------+---------------+-------------+------------------+\n| \"1\"  | \"\"     | \"manager\"        | \"\"            | \"1\"         | \"manager\"        |\n| \"2\"  | \"\"     | \"coursecreator\"  | \"\"            | \"2\"         | \"coursecreator\"  |\n| \"3\"  | \"\"     | \"editingteacher\" | \"\"            | \"3\"         | \"editingteacher\" |\n| \"4\"  | \"\"     | \"teacher\"        | \"\"            | \"4\"         | \"teacher\"        |\n| \"5\"  | \"\"     | \"student\"        | \"\"            | \"5\"         | \"student\"        |\n| \"6\"  | \"\"     | \"guest\"          | \"\"            | \"6\"         | \"guest\"          |\n| \"7\"  | \"\"     | \"user\"           | \"\"            | \"7\"         | \"user\"           |\n| \"8\"  | \"\"     | \"frontpage\"      | \"\"            | \"8\"         | \"frontpage\"      |\n+------+--------+------------------+---------------+-------------+------------------+\n\n ```"
+		},
+		{
+			"name": "_UNSOLVED",
+			"item": [
+				{
+					"name": "Set User Preferences",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"criteria\": [\n        {\n            \"key\": \"\",\n            \"value\": \"\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/moodle/webservice/rest/server.php?wstoken={{TOKEN}}&wsfunction=core_user_set_user_preferences&moodlewsrestformat=json&preferences[0][userid]=5&preferences[0][name]=CDM123_GROUPUID&preferences[0][value]=E96336E881664023ACA52C4FE09179DC",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"moodle",
+								"webservice",
+								"rest",
+								"server.php"
+							],
+							"query": [
+								{
+									"key": "wstoken",
+									"value": "{{TOKEN}}"
+								},
+								{
+									"key": "wsfunction",
+									"value": "core_user_set_user_preferences"
+								},
+								{
+									"key": "moodlewsrestformat",
+									"value": "json"
+								},
+								{
+									"key": "preferences[0][userid]",
+									"value": "5"
+								},
+								{
+									"key": "preferences[0][name]",
+									"value": "CDM123_GROUPUID"
+								},
+								{
+									"key": "preferences[0][value]",
+									"value": "E96336E881664023ACA52C4FE09179DC"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User Dates",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/moodle/webservice/rest/server.php?wstoken={{TOKEN}}&wsfunction=core_get_user_dates&moodlewsrestformat=json&timestamps=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"moodle",
+								"webservice",
+								"rest",
+								"server.php"
+							],
+							"query": [
+								{
+									"key": "wstoken",
+									"value": "{{TOKEN}}"
+								},
+								{
+									"key": "wsfunction",
+									"value": "core_get_user_dates"
+								},
+								{
+									"key": "moodlewsrestformat",
+									"value": "json"
+								},
+								{
+									"key": "contextid",
+									"value": "0",
+									"disabled": true
+								},
+								{
+									"key": "contextlevel",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "instanceid",
+									"value": "0",
+									"disabled": true
+								},
+								{
+									"key": "timestamps",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Notes",
+			"item": [
+				{
+					"name": "Get Notes for Course",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/moodle/webservice/rest/server.php?wstoken={{TOKEN}}&wsfunction=core_notes_get_course_notes&moodlewsrestformat=json&courseid=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"moodle",
+								"webservice",
+								"rest",
+								"server.php"
+							],
+							"query": [
+								{
+									"key": "wstoken",
+									"value": "{{TOKEN}}"
+								},
+								{
+									"key": "wsfunction",
+									"value": "core_notes_get_course_notes"
+								},
+								{
+									"key": "moodlewsrestformat",
+									"value": "json"
+								},
+								{
+									"key": "courseid",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Note for Course",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/moodle/webservice/rest/server.php?wstoken={{TOKEN}}&wsfunction=core_notes_create_notes&moodlewsrestformat=json&notes[0][userid]=5&notes[0][courseid]=2&notes[0][text]=GROUPUID=2CF13FA638FD453FA8BCA709C28AC37F&notes[0][publishstate]=course",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"moodle",
+								"webservice",
+								"rest",
+								"server.php"
+							],
+							"query": [
+								{
+									"key": "wstoken",
+									"value": "{{TOKEN}}"
+								},
+								{
+									"key": "wsfunction",
+									"value": "core_notes_create_notes"
+								},
+								{
+									"key": "moodlewsrestformat",
+									"value": "json"
+								},
+								{
+									"key": "notes[0][userid]",
+									"value": "5"
+								},
+								{
+									"key": "notes[0][courseid]",
+									"value": "2"
+								},
+								{
+									"key": "notes[0][text]",
+									"value": "GROUPUID=2CF13FA638FD453FA8BCA709C28AC37F"
+								},
+								{
+									"key": "notes[0][publishstate]",
+									"value": "course"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Note for Course",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/moodle/webservice/rest/server.php?wstoken={{TOKEN}}&wsfunction=core_notes_create_notes&moodlewsrestformat=json&notes[0][userid]=5&notes[0][courseid]=2&notes[0][text]=GROUPUID=2CF13FA638FD453FA8BCA709C28AC37F&notes[0][publishstate]=course",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"moodle",
+								"webservice",
+								"rest",
+								"server.php"
+							],
+							"query": [
+								{
+									"key": "wstoken",
+									"value": "{{TOKEN}}"
+								},
+								{
+									"key": "wsfunction",
+									"value": "core_notes_create_notes"
+								},
+								{
+									"key": "moodlewsrestformat",
+									"value": "json"
+								},
+								{
+									"key": "notes[0][userid]",
+									"value": "5"
+								},
+								{
+									"key": "notes[0][courseid]",
+									"value": "2"
+								},
+								{
+									"key": "notes[0][text]",
+									"value": "GROUPUID=2CF13FA638FD453FA8BCA709C28AC37F"
+								},
+								{
+									"key": "notes[0][publishstate]",
+									"value": "course"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "TOKEN",
+			"value": "a5f18d09758379f10e70409f34fcb0aa",
+			"type": "string"
+		}
+	]
+}

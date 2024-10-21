@@ -1,7 +1,7 @@
 const client = require('../src');
 
 const TEST_COURSE_ID = 2;
-const TEST_USER_ID = 5;
+const TEST_USER_ID = 8;
 const TEST_ROLE_ID = 5;
 
 const main = async () => {
