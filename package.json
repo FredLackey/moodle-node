@@ -1,9 +1,14 @@
 {
   "name": "moodle-node",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Manage Moodle from NodeJS",
   "main": "src/index.js",
   "scripts": {
+
+    "bod": "git add -A; git commit -am 'bod'; git push && git push crms main",
+    "eod": "git add -A; git commit -am 'eod'; git push && git push crms main",
+    "push": "git push && git push crms main",
+
     "test:getSiteInfo": "dotenv -e .env.local -- node tests/get-site-info.js",
     "test:getCourse": "dotenv -e .env.local -- node tests/get-course.js",
     "test:getCourses": "dotenv -e .env.local -- node tests/get-courses.js",
