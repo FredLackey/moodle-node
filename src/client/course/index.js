@@ -4,6 +4,7 @@ const getCourseNotes = require('./getCourseNotes');
 const addCourseNote = require('./addCourseNote');
 const deleteCourseNote = require('./deleteCourseNote');
 const updateCourseNote = require('./updateCourseNote');
+const getCourse = require('./getCourse');
 
 module.exports = {
   getCourses,
@@ -12,4 +13,5 @@ module.exports = {
   addCourseNote,
   deleteCourseNote,
   updateCourseNote,
+  getCourse,
 };

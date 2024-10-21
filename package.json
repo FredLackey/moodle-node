@@ -5,6 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "test:getSiteInfo": "dotenv -e .env.local -- node tests/get-site-info.js",
+    "test:getCourse": "dotenv -e .env.local -- node tests/get-course.js",
     "test:getCourses": "dotenv -e .env.local -- node tests/get-courses.js",
     "test:getCourseCategories": "dotenv -e .env.local -- node tests/get-course-categories.js",
     "test:getUsersAll": "dotenv -e .env.local -- node tests/get-users-all.js",
