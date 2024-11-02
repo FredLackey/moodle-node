@@ -1,40 +1,40 @@
 {
-  "name": "moodle-node",
-  "version": "1.0.9",
+  "name"       : "moodle-node",
+  "version"    : "1.0.10",
   "description": "Manage Moodle from NodeJS",
-  "main": "src/index.js",
-  "scripts": {
+  "main"       : "src/index.js",
+  "scripts"    : {
 
-    "bod": "git add -A; git commit -am 'bod'; git push && git push crms main",
-    "eod": "git add -A; git commit -am 'eod'; git push && git push crms main",
+    "bod" : "git add -A; git commit -am 'bod'; git push && git push crms main",
+    "eod" : "git add -A; git commit -am 'eod'; git push && git push crms main",
     "push": "git push && git push crms main",
 
-    "test:getSiteInfo": "dotenv -e .env.local -- node tests/get-site-info.js",
-    "test:getCourse": "dotenv -e .env.local -- node tests/get-course.js",
-    "test:getCourses": "dotenv -e .env.local -- node tests/get-courses.js",
+    "test:getSiteInfo"        : "dotenv -e .env.local -- node tests/get-site-info.js",
+    "test:getCourse"          : "dotenv -e .env.local -- node tests/get-course.js",
+    "test:getCourses"         : "dotenv -e .env.local -- node tests/get-courses.js",
     "test:getCourseCategories": "dotenv -e .env.local -- node tests/get-course-categories.js",
-    "test:getUsersAll": "dotenv -e .env.local -- node tests/get-users-all.js",
-    "test:getUser": "dotenv -e .env.local -- node tests/get-user.js",
-    "test:getUsers": "dotenv -e .env.local -- node tests/get-users.js",
-    "test:getUserCourses": "dotenv -e .env.local -- node tests/get-user-courses.js",
-    "test:createUser": "dotenv -e .env.local -- node tests/create-user.js",
-    "test:deleteUser": "dotenv -e .env.local -- node tests/delete-user.js",
-    "test:getUserPreferences": "dotenv -e .env.local -- node tests/get-user-preferences.js",
-    "test:getCohorts": "dotenv -e .env.local -- node tests/get-cohorts.js",
-    "test:getCohort": "dotenv -e .env.local -- node tests/get-cohort.js",
-    "test:createCohort": "dotenv -e .env.local -- node tests/create-cohort.js",
-    "test:updateCohort": "dotenv -e .env.local -- node tests/update-cohort.js",
-    "test:deleteCohort": "dotenv -e .env.local -- node tests/delete-cohort.js",
-    "test:getCohortMembers": "dotenv -e .env.local -- node tests/get-cohort-members.js",
-    "test:addCohortMember": "dotenv -e .env.local -- node tests/add-cohort-member.js",
-    "test:deleteCohortMember": "dotenv -e .env.local -- node tests/delete-cohort-member.js",
-    "test:getEnrolledUsers": "dotenv -e .env.local -- node tests/get-enrolled-users.js",
-    "test:addEnrolledUser": "dotenv -e .env.local -- node tests/add-enrolled-user.js",
-    "test:deleteEnrollment": "dotenv -e .env.local -- node tests/delete-enrollment.js",
-    "test:getCourseNotes": "dotenv -e .env.local -- node tests/get-course-notes.js",
-    "test:addCourseNote": "dotenv -e .env.local -- node tests/add-course-note.js",
-    "test:deleteCourseNote": "dotenv -e .env.local -- node tests/delete-course-note.js",
-    "test:updateCourseNote": "dotenv -e .env.local -- node tests/update-course-note.js"
+    "test:getUsersAll"        : "dotenv -e .env.local -- node tests/get-users-all.js",
+    "test:getUser"            : "dotenv -e .env.local -- node tests/get-user.js",
+    "test:getUsers"           : "dotenv -e .env.local -- node tests/get-users.js",
+    "test:getUserCourses"     : "dotenv -e .env.local -- node tests/get-user-courses.js",
+    "test:createUser"         : "dotenv -e .env.local -- node tests/create-user.js",
+    "test:deleteUser"         : "dotenv -e .env.local -- node tests/delete-user.js",
+    "test:getUserPreferences" : "dotenv -e .env.local -- node tests/get-user-preferences.js",
+    "test:getCohorts"         : "dotenv -e .env.local -- node tests/get-cohorts.js",
+    "test:getCohort"          : "dotenv -e .env.local -- node tests/get-cohort.js",
+    "test:createCohort"       : "dotenv -e .env.local -- node tests/create-cohort.js",
+    "test:updateCohort"       : "dotenv -e .env.local -- node tests/update-cohort.js",
+    "test:deleteCohort"       : "dotenv -e .env.local -- node tests/delete-cohort.js",
+    "test:getCohortMembers"   : "dotenv -e .env.local -- node tests/get-cohort-members.js",
+    "test:addCohortMember"    : "dotenv -e .env.local -- node tests/add-cohort-member.js",
+    "test:deleteCohortMember" : "dotenv -e .env.local -- node tests/delete-cohort-member.js",
+    "test:getEnrolledUsers"   : "dotenv -e .env.local -- node tests/get-enrolled-users.js",
+    "test:addEnrolledUser"    : "dotenv -e .env.local -- node tests/add-enrolled-user.js",
+    "test:deleteEnrollment"   : "dotenv -e .env.local -- node tests/delete-enrollment.js",
+    "test:getCourseNotes"     : "dotenv -e .env.local -- node tests/get-course-notes.js",
+    "test:addCourseNote"      : "dotenv -e .env.local -- node tests/add-course-note.js",
+    "test:deleteCourseNote"   : "dotenv -e .env.local -- node tests/delete-course-note.js",
+    "test:updateCourseNote"   : "dotenv -e .env.local -- node tests/update-course-note.js"
   },
 
   "repository": {
@@ -44,7 +44,7 @@
   "bugs"   : {
     "url": "https://github.com/FredLackey/moodle-node/issues"
   },
-  "homepage" : "https://github.com/FredLackey/moodle-node#readme",
+  "homepage": "https://github.com/FredLackey/moodle-node#readme",
 
   "keywords": [
     "moodle",
@@ -54,13 +54,13 @@
     "js"
   ],
   "author": {
-    "name": "Fred Lackey",
+    "name" : "Fred Lackey",
     "email": "fred.lackey@gmail.com",
-    "url": "http://fredlackey.com"
+    "url"  : "http://fredlackey.com"
   },
-  "license": "Apache-2.0",
+  "license"     : "Apache-2.0",
   "dependencies": {
-    "cleaner-node": "^1.3.1",
+    "cleaner-node"        : "^1.3.1",
     "xlsx-contacts-parser": "^1.0.0"
   },
   "devDependencies": {

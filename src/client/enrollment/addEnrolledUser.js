@@ -4,24 +4,13 @@ const FUNCTION = 'enrol_manual_enrol_users';
 const TOKEN = process.env.MOODLE_TOKEN;
 const BASE_URL = process.env.MOODLE_URL;
 
-const ROLES = {
-  MANAGER: 1,
-  COURSE_CREATOR: 2,
-  EDITING_TEACHER: 3,
-  TEACHER: 4,
-  STUDENT: 5,
-  GUEST: 6,
-  USER: 7,
-  FRONTPAGE: 8,
-}
-const getRoleId = (role) => ROLES[role];
-const getRoleName = (id) => Object.keys(ROLES).find(key => ROLES[key] === id);
+const { getRoleId } = require('../resources');
 
 const addEnrolledUser = async ({ courseid, userid, roleid, timestart, timeend, suspend }) => {
-  
+
   let url = `${BASE_URL}wsfunction=${FUNCTION}&wstoken=${TOKEN}&moodlewsrestformat=json`;
 
-  url += `&enrolments[0][roleid]=${roleid}`;
+  url += `&enrolments[0][roleid]=${getRoleId(roleid)}`;
   url += `&enrolments[0][userid]=${userid}`;
   url += `&enrolments[0][courseid]=${courseid}`;
 
