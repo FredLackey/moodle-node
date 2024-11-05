@@ -16,7 +16,7 @@ const createUser = async (params) => {
   url += firstname ? `&users[0][firstname]=${firstname}` : '';
   url += lastname ? `&users[0][lastname]=${lastname}` : '';
 
-  const response = await _.doPost(url);
+  const response = await _.doPost(url, {});
 
   if (_.isValidArray(response, false) && _.isValidString(response[0].username)) {
     return response[0];

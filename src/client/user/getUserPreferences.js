@@ -7,7 +7,7 @@ const BASE_URL = process.env.MOODLE_URL;
 const getUserPreferences = async (id) => {
   let url = `${BASE_URL}wsfunction=${FUNCTION}&wstoken=${TOKEN}&moodlewsrestformat=json`;
   url += `&userid=${id}`;
-  const response = await _.doPost(url);
+  const response = await _.doPost(url, {});
   return response;
 };
 

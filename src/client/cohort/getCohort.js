@@ -9,7 +9,7 @@ const getCohort = async (id) => {
 
   if (_.isNumber(id)) {
     const url = `${BASE_URL}wsfunction=${FUNCTION}&wstoken=${TOKEN}&moodlewsrestformat=json&cohortids[0]=${id}`;
-    const response = await _.doPost(url);
+    const response = await _.doPost(url, {});
     return _.single(response);
   }
 

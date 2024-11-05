@@ -10,7 +10,7 @@ const deleteCourseNote = async (id) => {
 
   url += `&notes[0]=${id}`;
 
-  const response = await _.doPost(url);
+  const response = await _.doPost(url, {});
   return response;
 };
 

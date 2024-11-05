@@ -27,7 +27,7 @@ const createCohort = async (params) => {
   url += type ? `&cohorts[0][categorytype][type]=${type}` : '';
   url += value ? `&cohorts[0][categorytype][value]=${value}` : '';
   
-  const data = await _.doPost(url);
+  const data = await _.doPost(url, {});
   if (_.isValidArray(data, true)) {
     return _.single(data);
   }

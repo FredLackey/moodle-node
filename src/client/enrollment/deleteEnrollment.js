@@ -11,7 +11,7 @@ const deleteEnrollment = async ({courseid, userid}) => {
   url += `&enrolments[0][courseid]=${courseid}`;
   url += `&enrolments[0][userid]=${userid}`;
 
-  const response = await _.doPost(url);
+  const response = await _.doPost(url, {});
   return response;
 };
 

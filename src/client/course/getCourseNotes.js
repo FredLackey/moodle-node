@@ -10,7 +10,7 @@ const getCourseNotes = async (courseid) => {
 
   url += `&courseid=${courseid}`;
 
-  const response = await _.doPost(url);
+  const response = await _.doPost(url, {});
   return response?.coursenotes;
 };
 

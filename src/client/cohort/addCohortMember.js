@@ -28,7 +28,7 @@ const addCohortMember = async (params) => {
     url += `&members[0][usertype][value]=${username}`;
   }
   
-  // const res = await _.doPost(url);
+  // const res = await _.doPost(url, {});
   // if (_.isValidObject(res)) {
   //   return res;
   // }
@@ -37,7 +37,7 @@ const addCohortMember = async (params) => {
   // }
 
   // return res;
-  const response = await _.doPost(url);
+  const response = await _.doPost(url, {});
   return response;
 };
 

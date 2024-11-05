@@ -13,7 +13,7 @@ const getUser = async (id) => {
   } else if (_.isValidString(id)) {
     url += `&criteria[0][key]=username&criteria[0][value]=${id}`;
   }
-  const response = await _.doPost(url);
+  const response = await _.doPost(url, {});
 
   if (_.isValidArray(response?.users, true)) {
     return _.first(response.users);

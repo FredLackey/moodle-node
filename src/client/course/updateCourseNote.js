@@ -21,7 +21,7 @@ const updateCourseNote = async ({ id, text, format = 'HTML' }) => {
   url += `&notes[0][publishstate]=${PUBLISH_STATE}`;
   url += `&notes[0][format]=${FORMATS[format]}`;
 
-  const response = await _.doPost(url);
+  const response = await _.doPost(url, {});
   return response;
 };
 

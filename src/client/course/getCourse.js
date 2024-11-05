@@ -10,7 +10,7 @@ const getCourse = async (id) => {
 
   url += `&options[ids][0]=${id}`;
 
-  const response = await _.doPost(url);
+  const response = await _.doPost(url, {});
 
   return _.isValidArray(response) ? _.first(response) : response;
 };

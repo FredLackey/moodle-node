@@ -22,7 +22,7 @@ const addEnrolledUser = async ({ courseid, userid, roleid, timestart, timeend, s
 
   url += ['true', '1', 1].includes(suspend) ? `&enrolments[0][suspend]=1` : '';
 
-  const response = await _.doPost(url);
+  const response = await _.doPost(url, {});
   return response;
 };
 

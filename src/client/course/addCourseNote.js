@@ -22,7 +22,7 @@ const addCourseNote = async ({ courseid, userid, text, format = 'HTML' }) => {
   url += `&notes[0][format]=${FORMATS[format]}`;
   url += `&notes[0][publishstate]=${PUBLISH_STATE}`;
 
-  const response = await _.doPost(url);
+  const response = await _.doPost(url, {});
   return response;
 };
 

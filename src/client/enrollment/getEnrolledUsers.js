@@ -6,7 +6,7 @@ const BASE_URL = process.env.MOODLE_URL;
 
 const getEnrolledUsers = async (id) => {
   const url = `${BASE_URL}wsfunction=${FUNCTION}&wstoken=${TOKEN}&moodlewsrestformat=json&courseid=${id}`;
-  const response = await _.doPost(url);
+  const response = await _.doPost(url, {});
   return response;
 };
 

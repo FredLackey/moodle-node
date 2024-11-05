@@ -8,7 +8,7 @@ const getCohortMembers = async (id) => {
   
   const url = `${BASE_URL}wsfunction=${FUNCTION}&wstoken=${TOKEN}&moodlewsrestformat=json&cohortids[0]=${id}`;
 
-  const data = await _.doPost(url);
+  const data = await _.doPost(url, {});
   if (data?.message) {
     console.error(`Error fetching cohort members: ${id}`, data.message);
     return [];

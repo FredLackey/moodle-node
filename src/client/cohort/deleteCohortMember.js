@@ -11,7 +11,7 @@ const deleteCohortMember = async ({cohort, user}) => {
   url += `&members[0][cohortid]=${cohort}`;
   url += `&members[0][userid]=${user}`;
 
-  const response = await _.doPost(url);
+  const response = await _.doPost(url, {});
   return response === null ? { id: user } : response;
 };
 
