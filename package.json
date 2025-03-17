@@ -1,6 +1,6 @@
 {
   "name"       : "moodle-node",
-  "version"    : "1.0.11",
+  "version"    : "1.0.12",
   "description": "Manage Moodle from NodeJS",
   "main"       : "src/index.js",
   "scripts"    : {
@@ -34,7 +34,8 @@
     "test:getCourseNotes"     : "dotenv -e .env.local -- node tests/get-course-notes.js",
     "test:addCourseNote"      : "dotenv -e .env.local -- node tests/add-course-note.js",
     "test:deleteCourseNote"   : "dotenv -e .env.local -- node tests/delete-course-note.js",
-    "test:updateCourseNote"   : "dotenv -e .env.local -- node tests/update-course-note.js"
+    "test:updateCourseNote"   : "dotenv -e .env.local -- node tests/update-course-note.js",
+    "test:updateUser"         : "dotenv -e .env.local -- node tests/update-user.js"
   },
 
   "repository": {
@@ -60,10 +61,10 @@
   },
   "license"     : "Apache-2.0",
   "dependencies": {
-    "cleaner-node"        : "^1.3.1",
-    "xlsx-contacts-parser": "^1.0.0"
+    "cleaner-node": "^1.3.2",
+    "xlsx-contacts-parser": "^1.0.1"
   },
   "devDependencies": {
-    "dotenv-cli": "^7.4.2"
+    "dotenv-cli": "^8.0.0"
   }
 }

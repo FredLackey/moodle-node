@@ -5,6 +5,7 @@ const getUser = require('./getUser');
 const getUserCourses = require('./getUserCourses');
 const getUserPreferences = require('./getUserPreferences');
 const getUsers = require('./getUsers');
+const updateUser = require('./updateUser');
 
 module.exports = {
   createUser,
@@ -14,4 +15,5 @@ module.exports = {
   getUserCourses,
   getUserPreferences,
   getUsers,
+  updateUser,
 };
